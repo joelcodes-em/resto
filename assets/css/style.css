@@ -1166,9 +1166,9 @@ body.nav-active { overflow: hidden; }
   #RESERVATION
 \*-----------------------------------*/
 
-.reservation-form { margin-block-start: 100px; }
+.reservation-form { margin-block-start: 190px;}
 
-.form-text { margin-block-end: 40px; }
+.form-text { margin-block-end: 10px; }
 
 .form-text .link {
   display: inline;
@@ -1485,7 +1485,7 @@ textarea.input-field {
     width: 100%;
     padding-block: 10px;
     border-block-end: 1px solid var(--white-alpha-20);
-    z-index: 4;
+    z-index: 10;
     transition: var(--transition-1);
   }
 
@@ -1615,18 +1615,25 @@ textarea.input-field {
     margin-inline: auto;
   }
 
-  .footer .input-wrapper { position: relative; }
+  .footer .input-wrapper { position: relative;
+    display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;
+  ;
+   }
 
   .footer .input-field {
     margin-block-end: 0;
-    padding-inline-end: 205px;
+    padding-right: 205px;
+   
   }
 
   .footer-brand .btn {
-    position: absolute;
-    top: 0;
+    
+    position: left;
+    top: 50%;
     right: 0;
-    bottom: 0;
+    transform:translateY(-50%);
     min-width: max-content;
   }
 
@@ -2140,4 +2147,151 @@ textarea.input-field {
     left: 0;
   }
 
+}
+.message{
+  position: sticky;
+  top:0;
+  max-width: 1200px;
+  margin:0 auto;
+  padding:2rem;
+  display: flex;
+  align-items: center;
+  gap:1rem;
+  justify-content: space-between;
+  background-color: var(--yellow);
+}
+
+.message span{
+  font-size: 2rem;
+  color:var(--weight-bold);
+}
+
+.message i{
+  font-size: 2.5rem;
+  color:var(--red);
+  cursor: pointer;
+}
+
+.message i:hover{
+  color:var(--black);
+}
+
+.empty{
+  border:var(--border);
+  padding:1.5rem;
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color:var(--red);
+}
+
+.user-details .user{
+  max-width: 50rem;
+  margin:0 auto;
+  border:var(--border);
+  padding:2rem;
+}
+
+.user-details .user img{
+  width: 100%;
+  height: 20rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.user-details .user p{
+  padding:1rem 0;
+  line-height: 1.5;
+  font-size: 2rem;
+}
+
+.user-details .user p span{
+  color:var(--black);
+}
+
+.user-details .user p i{
+  margin-right: 1rem;
+  color:var(--light-color);
+}
+
+.user-details .user .address{
+  margin-top: 1rem;
+}
+.cart-container {
+  padding-top: 250px;
+  margin-left: 250px; /* Adjust this value as needed */
+}
+.products {
+  position: relative; /* Set the position to relative */
+  padding-top: 200 px; 
+/* Adjust the distance from the top as needed */
+}
+.box-container {
+  /* Add styles for the container holding the product boxes */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust alignment as needed */
+}
+
+.box {
+  /* Add styles for individual product boxes */
+  width: calc(33.33% - 20px); /* Adjust width of each box */
+  margin-bottom: 20px; /* Add margin between boxes */
+}
+
+.remove-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ff0000; /* Red background color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.remove-button:hover {
+  background-color: #cc0000; /* Darker red background color on hover */
+}
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.item-image {
+  width: 100px; /* Adjust the width of the image as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add spacing between the image and item details */
+}
+
+.item-details {
+  flex: 1; /* Expand to fill remaining space */
+}
+
+.item-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.item-price, .item-quantity {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.remove-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ff0000; /* Red background color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.remove-button:hover {
+  background-color: #cc0000; /* Darker red background color on hover */
 }
